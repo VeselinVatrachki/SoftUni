@@ -1,0 +1,28 @@
+class Weapon():
+    weapon = []
+
+    def __init__(self, bullets: int):
+        self.bullets = bullets
+
+
+    def shoot(self):
+        if self.bullets > 0:
+            self.bullets -= 1
+            return "shooting..."
+        else:
+            return "no bullets left"
+
+
+    def __repr__(self):
+        return "Remaining bullets: " + str(self.bullets)
+
+
+weapon = Weapon(5)
+print(weapon.shoot())
+print(weapon.shoot())
+print(weapon)
+print(weapon.shoot())
+print(weapon.shoot())
+print(weapon.shoot())
+print(weapon.shoot())
+print(weapon)
